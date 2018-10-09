@@ -37,7 +37,9 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		int monInt = 1_000_000_000; 
 		System.out.println(monInt);
 		
-		//
+		//long => 8 octets
+		long monLong = 10_000_000_000;
+		System.out.println(monLong);
 		
 	}
 
