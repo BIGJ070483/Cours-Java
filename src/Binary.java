@@ -9,5 +9,4 @@ public class Binary {
 			System.out.println(str);
 		}
 	}
-
 }
