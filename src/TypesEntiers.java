@@ -75,6 +75,32 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		int test = value2 / 0 ;
 		System.out.println(test); // ici cela va poser probleme car le resultat de la variable test est impossible car ont ne peut pas diviser par 0
 		*/
-		
+//___________________________________________________________________________________________________________________________________
+		//passer d'un type a un autre
+        byte c = 10;
+        short s = c;        // Autorisé, car taille byte < taille short
+        System.out.println( s );    // Affiche 10
+        
+        long l = 10;        // Ici, on demande explicitement de réduire la taille de la donnée
+        int i = (int) l;    // de 8 octets vers 4 octets, via l'opérateur de transtypage (int) 
+        System.out.println( i );    // Affiche 10
+        
+        i = 200000;
+        s = (short) i;              // Attention, il va y avoir une perte d'information !
+        System.out.println( s );    // Affiche 3392, car un short ne peut pas dépasser 32767
+//__________________________________________________________________________________________________________________________________
+        //les differentes bases numeriques
+        int       binaryValue1 = 0b10;     // == 2
+        int        octalValue1 = 010;      // == 8
+        int      decimalValue1 = 10;
+        int  hexadecimalValue1 = 0x10;     // == 16
+         
+        System.out.println( binaryValue1 );
+        System.out.println( octalValue1 );
+        System.out.println( decimalValue1 );
+        System.out.println( hexadecimalValue1 );
+
+        hexadecimalValue = 0xff;          // On change la valeur : 255 en décimal
+        System.out.println( hexadecimalValue );
 		}
 }
