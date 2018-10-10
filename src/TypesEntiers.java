@@ -38,8 +38,10 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		System.out.println(monInt);
 		
 		//long => 8 octets
-		long monLong = 10_000_000_000L;
+		long monLong = 10_000_000_000L; // avec la variable long bien mettre un l ou L a la fin du chiffre pour le typer
 		System.out.println(monLong);
+		
+		// 4 bases en numerique
 		
 	}
 
