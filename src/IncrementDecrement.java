@@ -24,6 +24,14 @@ public class IncrementDecrement {
 		int result1 = ++part3 + ++part4 ;// ici l'insrement est avant la variable donc java fait d'abord l'increment puis le calcul
 		System.out.println(result1+"-"+part3+"-"+part4);
 		
+		//voici la bonne marche a suivre histoire de pas s'emmeler les pinceaux
+		int a1 = 0 ;//declaration de la variable et initialisation a 0
+		a1++; //incrementation de la variable
+		int a2 = 0 ; //declaration de la variable et initialisation a 0
+		a2++;//incrementation de la variable
+		int result2 = a1 + a2 ; // resultat de l'operation des 2 variables deja incrementées
+		System.out.println(result2); // affichage du resultat
+		
 	}
 
 }
