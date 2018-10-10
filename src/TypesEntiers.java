@@ -70,6 +70,18 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		currentValue += 5 ; // ici ont ont le calcul est currentValue = currentValue + 5 , sous sa forme simplifée
 		System.out.println(currentValue);
 		
+		int firstValue = 11;
+        int secondValue = 3;
+        int div = firstValue / secondValue;
+        int rest = firstValue % secondValue;
+    
+        int computedValue = div * secondValue + rest;
+    
+        System.out.println( "11 / 3 == " + div );                      // Affiche 3
+        System.out.println( "11 % 3 == " + rest );                     // Affiche 2
+        System.out.println( "computedValue == " + computedValue );     // Affiche 11
+
+		
 		/*
 		int value2 = 3 ;
 		int test = value2 / 0 ;
@@ -102,5 +114,24 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 
         hexadecimalValue = 0xff;          // On change la valeur : 255 en décimal
         System.out.println( hexadecimalValue );
+        
+//__________________________________________________________________________________________________________________________________
+        //Operateurs de comparaisons
+        int numerator1 = 1;
+        int denominator1 = 3;
+        
+        int numerator2 = 2;
+        int denominator2 = 1;  
+ 
+        int leftPart = numerator1 * denominator2;
+        int rightPart = denominator1 * numerator2;
+        
+        if ( leftPart == rightPart ) {
+            System.out.println( "Les fractions sont équivalentes" );
+        } else if ( leftPart < rightPart ) {
+            System.out.println( "La première fraction est plus petite" );
+        } else {
+            System.out.println( "La première fraction est plus grande" );
+        }
 		}
 }
