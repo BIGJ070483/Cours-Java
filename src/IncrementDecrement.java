@@ -32,6 +32,10 @@ public class IncrementDecrement {
 		int result2 = a1 + a2 ; // resultat de l'operation des 2 variables deja incrementées
 		System.out.println(result2); // affichage du resultat
 		
+        // ici un autre exemple ou l'ont increment d'abord le resultat de 0 à 9 car i<10 et non pas i=10
+        for( int i=0; i<10; ++i ) {
+            System.out.println( "i == " + i );
+        }
 	}
 
 }
