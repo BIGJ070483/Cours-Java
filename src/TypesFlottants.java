@@ -25,19 +25,20 @@ public class TypesFlottants {
 		double essai3 = 0.0/0.0;// aura pour resultat NaN = not a number 
 		System.out.println(essai1 +"-"+essai2+"-"+essai3);
 		
+		//ici ont voit comment verifier via une class
 		float f2 = 3.6f;
 		float f3 = Float.NaN;
 		float f4 = Float.NEGATIVE_INFINITY;
-		System.out.println(f2 +"-"+f3+"-"+f4+"\n");
-		
+
+		//ont verifie si les variable sont finies (normales)
 		System.out.println(Float.isFinite(f2)+" f2");
 		System.out.println(Float.isFinite(f3)+" f3");
 		System.out.println(Float.isFinite(f4)+" f4\n");
-		
+		//ont verifie si les variables sont infinies
 		System.out.println(Float.isInfinite(f2)+" f2");
 		System.out.println(Float.isInfinite(f3)+" f3");
 		System.out.println(Float.isInfinite(f4)+" f4\n");
-		
+		//ont verifie si les variables ne sont pas des nombres ( NaN)
 		System.out.println(Float.isNaN(f2)+" f2");
 		System.out.println(Float.isNaN(f3)+" f3");
 		System.out.println(Float.isNaN(f4)+" f4\n");

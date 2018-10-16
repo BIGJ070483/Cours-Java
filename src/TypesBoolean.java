@@ -2,7 +2,11 @@
 public class TypesBoolean {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		boolean state1 = true;
+		System.out.println(state1);
+		
+		boolean state2 = false;
+		System.out.println(state2);
 
 	}
 
