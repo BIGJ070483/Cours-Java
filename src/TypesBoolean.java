@@ -10,6 +10,8 @@ public class TypesBoolean {
 		boolean state2 = false;
 		System.out.println(state2);
 
+		
+		
 	}
 
 }
