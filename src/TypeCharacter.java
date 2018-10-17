@@ -29,6 +29,5 @@ public class TypeCharacter {
 		System.out.println(isLetter);
 		boolean isUpperCaseLetter = Character.isUpperCase(piMin);	//ont verifie si la variable piMin est en majuscule
 		System.out.println(isUpperCaseLetter);
-		
-	}
+		}
 }
