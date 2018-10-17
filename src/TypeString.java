@@ -2,7 +2,8 @@
 public class TypeString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String message = "Ceci est une phrase en unicode (\u03c0)";
+		System.out.println(message);
 
 	}
 
