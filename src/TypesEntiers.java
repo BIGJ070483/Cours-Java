@@ -5,31 +5,31 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		
 		int counter = 10;  				// int = integer , uniquement des nombres entiers
 		counter ++ ;	  				// ++ signifie incrementer la variable c'est a dire +1
-		System.out.println( counter );  //affiche le resultat de la variable modifiée par l'increment ++
+		System.out.println( counter );  //affiche le resultat de la variable modifiï¿½e par l'increment ++
 		counter --;						// -- est le contraire du ++
-		System.out.println( counter );  //affiche le resultat de la variable modifiée par l'increment --
-		// régles pour les noms de variables: caractéres autorisés  = lettre , chiffre, _ , $
+		System.out.println( counter );  //affiche le resultat de la variable modifiï¿½e par l'increment --
+		// rï¿½gles pour les noms de variables: caractï¿½res autorisï¿½s  = lettre , chiffre, _ , $
 		
 		int var2 = 100; 			// aucune erreur le nom de la variable est correcte
-		int nom_complexe = 200; 	// ici pareil aucun probleme avec le _ // à éviter
-		int nom$complexe = 300; 	//idem avec $						   // à éviter
-		int nomélémentaire = 400; 	// aucun probleme avec des accents   // à éviter
+		int nom_complexe = 200; 	// ici pareil aucun probleme avec le _ // ï¿½ ï¿½viter
+		int nom$complexe = 300; 	//idem avec $						   // ï¿½ ï¿½viter
+		int nomÃ©lÃ©mentaire = 400; 	// aucun probleme avec des accents   // ï¿½ ï¿½viter
 		
 		//int 2var = 0; // cela ne fonctionne pas si la variable commence par un chiffre, toujours commencer par une lettre
 		
 		int nomComplexe = 500; 		/* ici le nom d'une variable correct, 
-									composé de 2 mots , 1er mot comment par une minuscule ,
+									composï¿½ de 2 mots , 1er mot comment par une minuscule ,
 									la majuscule sers de separateur pour chaque autre mots
 									*/
-		System.out.println( var2 + " - " + nom_complexe + " - " + nom$complexe +" - " + nomélémentaire + " - " + nomComplexe ); // resultat final
+		System.out.println( var2 + " - " + nom_complexe + " - " + nom$complexe +" - " + nomÃ©lÃ©mentaire + " - " + nomComplexe ); // resultat final
 //___________________________________________________________________________________________________________________________________		
 		// Les 4 types entiers
 		
-		//byte  => 1 octet => -128 à +127
+		//byte  => 1 octet => -128 ï¿½ +127
 		byte monOctet = 111;
 		System.out.println( monOctet );
 		
-		//Short => 2 octets => -32768 à +32767
+		//Short => 2 octets => -32768 ï¿½ +32767
 		short monShort = 30000;
 		System.out.println(monShort);
 		
@@ -42,19 +42,19 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		System.out.println(monLong);
 //___________________________________________________________________________________________________________________________________		
 		// 4 bases en numerique
-		int decimalValue = 10 ;		// 10 digits de 0 à 9
+		int decimalValue = 10 ;		// 10 digits de 0 ï¿½ 9
 		System.out.println(decimalValue);
 		
-		int binaryValue = 0b101 ;	// valeur 5 exprimée en binaire  	2 digits 0 et 1
+		int binaryValue = 0b101 ;	// valeur 5 exprimï¿½e en binaire  	2 digits 0 et 1
 		System.out.println(binaryValue);
 		
-		int octalValue = 010 ;		// 8			8 digits 0 à 7
+		int octalValue = 010 ;		// 8			8 digits 0 ï¿½ 7
 		System.out.println(octalValue);
 		
-		int hexadecimalValue = 0xff ; //valeur 255 exprimé en hexadecimal , sur 16 digits en tout 0à 9 et A à F
+		int hexadecimalValue = 0xff ; //valeur 255 exprimï¿½ en hexadecimal , sur 16 digits en tout 0ï¿½ 9 et A ï¿½ F
 		System.out.println(hexadecimalValue);
 //___________________________________________________________________________________________________________________________________
-		// les opérateurs sur valeur entière : ++   -- 			 +   -   /   *   % 				 +=   -=   *=   /=   %=
+		// les opï¿½rateurs sur valeur entiï¿½re : ++   -- 			 +   -   /   *   % 				 +=   -=   *=   /=   %=
 		int a = 33 ;
 		int b = 44 ; 
 		int resultat = a - b ; 		//ont calcul le resultat des variables a et b par un operateur
@@ -67,7 +67,7 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 		System.out.println(total);
 		
 		int currentValue = 1 ;
-		currentValue += 5 ; // ici ont ont le calcul est currentValue = currentValue + 5 , sous sa forme simplifée
+		currentValue += 5 ; // ici ont ont le calcul est currentValue = currentValue + 5 , sous sa forme simplifï¿½e
 		System.out.println(currentValue);
 		
 		int firstValue = 11;
@@ -90,16 +90,16 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
 //___________________________________________________________________________________________________________________________________
 		//passer d'un type a un autre
         byte c = 10;
-        short s = c;        // Autorisé, car taille byte < taille short
+        short s = c;        // Autorisï¿½, car taille byte < taille short
         System.out.println( s );    // Affiche 10
         
-        long l = 10;        // Ici, on demande explicitement de réduire la taille de la donnée
-        int i = (int) l;    // de 8 octets vers 4 octets, via l'opérateur de transtypage (int) 
+        long l = 10;        // Ici, on demande explicitement de rï¿½duire la taille de la donnï¿½e
+        int i = (int) l;    // de 8 octets vers 4 octets, via l'opï¿½rateur de transtypage (int) 
         System.out.println( i );    // Affiche 10
         
         i = 200000;
         s = (short) i;              // Attention, il va y avoir une perte d'information !
-        System.out.println( s );    // Affiche 3392, car un short ne peut pas dépasser 32767
+        System.out.println( s );    // Affiche 3392, car un short ne peut pas dï¿½passer 32767
 //__________________________________________________________________________________________________________________________________
         //les differentes bases numeriques
         int       binaryValue1 = 0b10;     // == 2
@@ -112,7 +112,7 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
         System.out.println( decimalValue1 );
         System.out.println( hexadecimalValue1 );
 
-        hexadecimalValue = 0xff;          // On change la valeur : 255 en décimal
+        hexadecimalValue = 0xff;          // On change la valeur : 255 en dï¿½cimal
         System.out.println( hexadecimalValue );
         
 //__________________________________________________________________________________________________________________________________
@@ -127,11 +127,11 @@ public class TypesEntiers { // ici ont voit le nom de la class qui commence par 
         int rightPart = denominator1 * numerator2;
         
         if ( leftPart == rightPart ) {
-            System.out.println( "Les fractions sont équivalentes" );
+            System.out.println( "Les fractions sont ï¿½quivalentes" );
         } else if ( leftPart < rightPart ) {
-            System.out.println( "La première fraction est plus petite" );
+            System.out.println( "La premiï¿½re fraction est plus petite" );
         } else {
-            System.out.println( "La première fraction est plus grande" );
+            System.out.println( "La premiï¿½re fraction est plus grande" );
         }
 		}
 }
