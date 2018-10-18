@@ -35,8 +35,11 @@ public class TypeString {
 		
 		//ont va modifier dans la variable message , via la fonction replace
 		// le mot String par le mot Bidule
+		//par contre cela ne modifie toujours pas la variable d'origine ont continue d'en creer de nouvelle
+		// en utilisant de base la variable message
 		String remplacement = message.replace("String", "Bidule"); 
 		System.out.println(remplacement);
 		
+				
 	}
 }
