@@ -21,7 +21,7 @@ public class TypeString {
 		System.out.println(message);
 		
 		String subPart = message.substring(22,29);
-		System.out.println(subPart);
+		System.out.println(subPart + "!");
 		
 	}
 
