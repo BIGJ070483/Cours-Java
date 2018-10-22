@@ -40,6 +40,22 @@ public class TypeString {
 		String remplacement = message.replace("String", "Bidule"); 
 		System.out.println(remplacement);
 		
-				
+		// Pour transformer des chaines de caracteres en nombre et des nombres en chaines -----------------------
+		String strValue = "123"; //creation de la chaine de caractere strValue
+		int value = Integer.parseInt(strValue); // ont creer la variable value dans laquelle ont copie le string converti en int de strValue
+		strValue = "3.141592654"; // ici strValue est toujours en type String ont lui assigne la valeur de pi
+		double value2 = Double.parseDouble(strValue); // ont converti srtValue(string) en double value2
+		System.out.println(value +" - "+ value2); //ont affiche les variables converties
+		
+		
 	}
 }
+
+
+
+
+
+
+
+
+
