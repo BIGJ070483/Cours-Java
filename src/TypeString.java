@@ -47,6 +47,34 @@ public class TypeString {
 		double value2 = Double.parseDouble(strValue); // ont converti srtValue(string) en double value2
 		System.out.println(value +" - "+ value2); //ont affiche les variables converties
 		
+		String finalString = value+""; /*ici ont crée finalString en type chaine de caractere ( String) 
+											via value qui est un integer et une chaine de caractere vide cela converti automatiquement
+											value + chaine de caractere en chaine de caractere*/ 
+		finalString += " ";				// ici ont ajoute un espace apres value
+		finalString += Double.toString(value2); //ici ont ajoute a finalString la valeur de value2 qu'on converti en chaine de caractere
+		System.out.println(finalString); //ont affiche les variables converties
+		
+		String strFinal2 = String.format("%05d [%05.2f]", value, value2); /*ont se sert de String.format qui nous permet de definir ce que 
+																	l'ont veut afficher dans le resultat, ont pourrait tres bien definir
+																	un nombre ou un format precis via la class String.format
+																	05d veut dire qu'ont veut en tout et que si il y a du vide ont utilise
+																	le 0 pour le remplir
+																	idem avec le 05.2f ont defini que l'ont veut 5 caractere uniquement
+																	EN TOUT virgule comprise donc et que le vide est rempli par des 0*/
+		System.out.println(strFinal2);
+		//================================================================================================
+		//Attention aux comparaisons de chaines de caractères
+		
+		String str1 = "toto";
+		String str2 = "tata";
+		String str3 = "toto";
+		System.out.println(str1 == str2); // comme ça ont pourrait croire que ça marche mais il y a une optimisation sur les contantes.
+		System.out.println(str1 == str3); // ce qui est comparé se sont les adresses des deux objets en mémoire.
+		
+		String half = "to";
+		String str4 = half+half;
+		System.out.println(str1 + " - " + str4 + " => " + (str1==str4)); //les pointeurs en mémoires sont des adresses differentes
+		
 		
 	}
 }
