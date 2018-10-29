@@ -12,7 +12,7 @@ public class StringOptims {
 		int part3 = 123;
 		char part4 = '\u03c0';
 		
-		for (int i=0 ; i<LOOP_COUNT; i++){
+		for (int i=0 ; i<LOOP_COUNT; i++){			//ici ont boucle un nombre de fois LOOP_COUNT pour utiliser du temps machine
 			String fullMessage = "Begin - ";
 			fullMessage += part1;
 			fullMessage += " - ";
@@ -24,8 +24,8 @@ public class StringOptims {
 			fullMessage += " - End";
 			//System.out.println( fullMessage);	
 			}
-			
-			long end = System.currentTimeMillis();
+			// petit modif de ma part par rapport au cours, je me suis amusé a convertir le temps d'execution des millisecondes en secondes
+			long end = System.currentTimeMillis(); 
 			long millis = end-begin;
 			long secondes= TimeUnit.MILLISECONDS.toSeconds(millis);
 			System.out.println( "Duration: " + (secondes)+ "s"); /* ont calcul la difference en milliseconde entre les variables end et 
