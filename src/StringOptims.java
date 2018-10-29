@@ -35,6 +35,7 @@ public class StringOptims {
 																					begin afin de definir le temps 
 																					d'execution des commandes*/
 			optimsThreadSafe();
+			optimsThreadUnsafe();
 	}
 
 	public static void optimsThreadSafe() {
@@ -69,4 +70,31 @@ public class StringOptims {
 			
 	}
 	
+	public static void optimsThreadUnsafe() {
+		long beginBuilder = System.currentTimeMillis();
+		
+		String part1 = "part1";
+		double part2 = 3.141592654;
+		int part3 = 123;
+		char part4 = '\u03c0';
+		
+		for (int i=0 ; i<LOOP_COUNT; i++){	
+			StringBuilder builder = new StringBuilder ("Begin - ");
+			builder.append( part1 );
+			builder.append( " - " );
+			builder.append( part2 );
+			builder.append( " - " );
+			builder.append( part3 );
+			builder.append( " - " );
+			builder.append( part4 );
+			builder.append( " - End");
+			String fullMessage = builder.toString();
+			//System.out.println(fullMessage);
+			
+			long endBuilder = System.currentTimeMillis(); 
+			long millisBuilder = endBuilder-beginBuilder;
+			long secondesBuilder= TimeUnit.MILLISECONDS.toSeconds(millisBuilder);
+			System.out.println( "Duration for StringBuilder: " + (secondesBuilder)+ "s ou " +(millisBuilder)+"ms");
+		}
+	}
 }
