@@ -90,11 +90,11 @@ public class StringOptims {
 			builder.append( " - End");
 			String fullMessage = builder.toString();
 			//System.out.println(fullMessage);
-			
+		}
 			long endBuilder = System.currentTimeMillis(); 
 			long millisBuilder = endBuilder-beginBuilder;
 			long secondesBuilder= TimeUnit.MILLISECONDS.toSeconds(millisBuilder);
 			System.out.println( "Duration for StringBuilder: " + (secondesBuilder)+ "s ou " +(millisBuilder)+"ms");
-		}
+		
 	}
 }
