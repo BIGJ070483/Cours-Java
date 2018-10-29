@@ -24,19 +24,21 @@ public class StringOptims {
 			fullMessage += " - ";
 			fullMessage += part4;
 			fullMessage += " - End";
-			//System.out.println( fullMessage);	
+			//System.out.println( fullMessage + " String");	
 			}
 			// petit modif de ma part par rapport au cours, je me suis amusé a convertir le temps d'execution des millisecondes en secondes
 			long end = System.currentTimeMillis(); 
 			long millis = end-begin;
 			long secondes= TimeUnit.MILLISECONDS.toSeconds(millis);
-			System.out.println( "Duration: " + (secondes)+ "s ou " +(millis)+"ms"); /* ont calcul la difference en milliseconde 
+			System.out.println( "Duration for String: " + (secondes)+ "s ou " +(millis)+"ms"); /* ont calcul la difference en milliseconde 
 																					entre les variables end et 
 																					begin afin de definir le temps 
 																					d'execution des commandes*/
+			optimsThreadSafe();
 	}
+
 	public static void optimsThreadSafe() {
-		long begin = System.currentTimeMillis(); /* currentTimeMillis affiche ou defini l'heure en millisecondes*/
+		long beginBuffer = System.currentTimeMillis(); /* currentTimeMillis affiche ou defini l'heure en millisecondes*/
 
 		String part1 = "part1";
 		double part2 = 3.141592654;
@@ -53,13 +55,14 @@ public class StringOptims {
 			buffer.append( " - " );
 			buffer.append( part4 );
 			buffer.append( " - End");
-			//System.out.println( fullMessage);	
+			String fullMessage = buffer.toString();
+			//System.out.println( fullMessage + "StringBuffer");	
 			}
 			// petit modif de ma part par rapport au cours, je me suis amusé a convertir le temps d'execution des millisecondes en secondes
-			long end = System.currentTimeMillis(); 
-			long millis = end-begin;
-			long secondes= TimeUnit.MILLISECONDS.toSeconds(millis);
-			System.out.println( "Duration: " + (secondes)+ "s ou " +(millis)+"ms"); /* ont calcul la difference en milliseconde 
+			long endBuffer = System.currentTimeMillis(); 
+			long millisBuffer = endBuffer-beginBuffer;
+			long secondesBuffer= TimeUnit.MILLISECONDS.toSeconds(millisBuffer);
+			System.out.println( "Duration for StringBuffer: " + (secondesBuffer)+ "s ou " +(millisBuffer)+"ms"); /* ont calcul la difference en milliseconde 
 																						entre les variables end et 
 																						begin afin de definir le temps 
 																						d'execution des commandes*/
