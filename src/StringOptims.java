@@ -6,7 +6,8 @@ public class StringOptims {
 
 	private static final int LOOP_COUNT = 10_000_000;
 	
-	public static void main(String[] args) {
+	public static void withoutOptims() {
+
 		long begin = System.currentTimeMillis(); /* currentTimeMillis affiche ou defini l'heure en millisecondes*/
 
 		String part1 = "part1";
@@ -34,9 +35,8 @@ public class StringOptims {
 																					entre les variables end et 
 																					begin afin de definir le temps 
 																					d'execution des commandes*/
-			optimsThreadSafe();
-			optimsThreadUnsafe();
 	}
+
 
 	public static void optimsThreadSafe() {
 		long beginBuffer = System.currentTimeMillis(); /* currentTimeMillis affiche ou defini l'heure en millisecondes*/
@@ -47,7 +47,10 @@ public class StringOptims {
 		char part4 = '\u03c0';
 		
 		for (int i=0 ; i<LOOP_COUNT; i++){			//ici ont boucle un nombre de fois LOOP_COUNT pour utiliser du temps machine
-			StringBuffer buffer = new StringBuffer("Begin - ");
+			StringBuffer buffer = new StringBuffer("Begin - "); /*la methode StringBuffer permet d'ajouter via buffer.append
+																	la concatenation ( ou ajout a une variable)de maniere bcp plus rapide
+																	et optimiser car ont ne recreer pas un objet(variable) a chaque fois
+																	tout en ayant la possibilité de dedier le processus a un thread*/
 			buffer.append( part1 );
 			buffer.append( " - " );
 			buffer.append( part2 );
@@ -79,7 +82,12 @@ public class StringOptims {
 		char part4 = '\u03c0';
 		
 		for (int i=0 ; i<LOOP_COUNT; i++){	
-			StringBuilder builder = new StringBuilder ("Begin - ");
+			StringBuilder builder = new StringBuilder ("Begin - ");/*la methode StringBuffer permet d'ajouter via buffer.append
+																	 la concatenation ( ou ajout a une variable)de 
+																	 maniere bcp plus rapide
+																     et optimiser car ont ne recreer pas un objet(variable) 
+																	 a chaque fois
+																	 tout en ayant la possibilité de dedier le processus a un thread*/
 			builder.append( part1 );
 			builder.append( " - " );
 			builder.append( part2 );
@@ -96,5 +104,10 @@ public class StringOptims {
 			long secondesBuilder= TimeUnit.MILLISECONDS.toSeconds(millisBuilder);
 			System.out.println( "Duration for StringBuilder: " + (secondesBuilder)+ "s ou " +(millisBuilder)+"ms");
 		
+	}
+	public static void main(String[] args) {
+		withoutOptims();
+		optimsThreadSafe();
+		optimsThreadUnsafe();
 	}
 }
