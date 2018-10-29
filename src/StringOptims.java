@@ -4,8 +4,8 @@ public class StringOptims {
 	private static final int LOOP_COUNT = 10_000_000;
 	
 	public static void main(String[] args) {
-		long begin = System.currentTimeMillis();
-		System.out.println(begin);
+		long begin = System.currentTimeMillis(); /* currentTimeMillis affiche ou defini l'heure en millisecondes*/
+
 		String part1 = "part1";
 		double part2 = 3.141592654;
 		int part3 = 123;
@@ -25,7 +25,8 @@ public class StringOptims {
 			//}
 			
 			long end = System.currentTimeMillis();
-			System.out.println( "Duration: " + (end-begin)+ "ms");
+			System.out.println( "Duration: " + (end-begin)+ "ms"); /* ont calcul la difference en milliseconde entre les variables end et 
+																		begin afin de definir le temps d'execution des commandes*/
 		
 
 	}
