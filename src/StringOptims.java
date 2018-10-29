@@ -1,3 +1,4 @@
+import java.util.concurrent.TimeUnit;
 
 public class StringOptims {
 
@@ -11,7 +12,7 @@ public class StringOptims {
 		int part3 = 123;
 		char part4 = '\u03c0';
 		
-		//for (int i=0 ; i<LOOP_COUNT; i++){
+		for (int i=0 ; i<LOOP_COUNT; i++){
 			String fullMessage = "Begin - ";
 			fullMessage += part1;
 			fullMessage += " - ";
@@ -21,14 +22,14 @@ public class StringOptims {
 			fullMessage += " - ";
 			fullMessage += part4;
 			fullMessage += " - End";
-			System.out.println( fullMessage);	
-			//}
+			//System.out.println( fullMessage);	
+			}
 			
 			long end = System.currentTimeMillis();
-			System.out.println( "Duration: " + (end-begin)+ "ms"); /* ont calcul la difference en milliseconde entre les variables end et 
+			long millis = end-begin;
+			long secondes= TimeUnit.MILLISECONDS.toSeconds(millis);
+			System.out.println( "Duration: " + (secondes)+ "s"); /* ont calcul la difference en milliseconde entre les variables end et 
 																		begin afin de definir le temps d'execution des commandes*/
-		
-
 	}
 
 }
