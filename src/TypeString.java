@@ -64,26 +64,22 @@ public class TypeString {
 		System.out.println(strFinal2);
 		//================================================================================================
 		//Attention aux comparaisons de chaines de caractères
-		
 		String str1 = "toto";
 		String str2 = "tata";
 		String str3 = "toto";
 		System.out.println(str1 == str2); // comme ça ont pourrait croire que ça marche mais il y a une optimisation sur les contantes.
 		System.out.println(str1 == str3); // ce qui est comparé se sont les adresses des deux objets en mémoire.
 		
-		String half = "to";
+		String half = "To";
 		String str4 = half+half;
-		System.out.println(str1 + " - " + str4 + " => " + (str1==str4)); //les pointeurs en mémoires sont des adresses differentes
-		
-		
+		System.out.println(str1 + " - " + str4 + " => " + (str1==str4)); /*les pointeurs en mémoires sont des adresses differentes
+																			donc java ne verifie pas le contenu des variables 
+																			mais les emplacements memoire, ici les emplacements
+																			ne sont pas identique donc c'est false*/
+		System.out.println(str1.equals( str4 ));						/* la ont utilise .equals sur la variable str1 pour verifier si 
+																			elle est egale a str4  et donc non elle n'est pas egale car
+																			toto n'est pas egale a ToTo*/
+		System.out.println(str1.equalsIgnoreCase(str4));				/* ici equalsignorecase permet de verifie le contenu des variables
+																			sans tenir compte des majuscule et minuscule */
 	}
 }
-
-
-
-
-
-
-
-
-
