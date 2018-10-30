@@ -1,5 +1,7 @@
 import java.util.concurrent.TimeUnit; //le fait d'utiliser une class de java l'import automatiquement apparement , à verifier
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 
 @SuppressWarnings("unused") // ont supprime les avertissements d'objet inutilisés
 public class StringOptims {
@@ -109,5 +111,24 @@ public class StringOptims {
 		withoutOptims();
 		optimsThreadSafe();
 		optimsThreadUnsafe();
-	}
+		
+		// Attention : les concatenations en ligne sont automatiquement optimisées.
+		// vous pouvez le verifier via l'outil javap ( javap -c ClassName)
+		
+		String part1 = "part1";
+		double part2 = 3.141592654;
+		int part3 = 123;
+		char part4 = '\u03c0';
+		
+		/* l'exemple ci dessous est automatiquement optimisé par java
+		 * lors de l'execution il invoque directement StringBuilder et fait a chaque + un StringBuilder.append
+		 * il est donc automatiquement optimiser pour s'executer le plus rapidement possible
+		 * mais attention il ne sera pas dedié a un thread!! a utiliser pour de petites choses pas pour des gros calculs
+		 */
+		String fullMessage = "Begin - " + part1 + " - " + part2 + " - " + part3 + " - " + part4 + " - END";
+		System.out.println(fullMessage);
+		
+		
+		
+		}
 }
