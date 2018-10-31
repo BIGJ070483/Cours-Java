@@ -1,4 +1,3 @@
-import java.sql.DriverManager;
 import java.util.Arrays;
 
 public class TypeAuto {
