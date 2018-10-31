@@ -3,7 +3,7 @@ public class FormattedPrints {
 
 	public static void main(String[] args) {
 		
-		int num = 8;
+		int num = 25;
 		int den = 11;
 		System.out.println("[" + num + "/" + den + "]");
 		System.out.printf("[%d/%d]\n", num, den);
@@ -23,7 +23,8 @@ public class FormattedPrints {
 		System.out.printf(">%05d<\n",1_000_000_000); 
 		System.out.printf(">%,d<\n",1_000_000_000);  // ici la virgule sers a valider la separation de _
 		
-		
+		System.out.printf("%d %o %x\n", num, num , num); // %d = entier %o = octal %x = hexadecimale
+		System.out.printf(">%08x<\n",num); // ont peu grouper meme en hexadecimale( ou en octal)
 	}
 
 }
