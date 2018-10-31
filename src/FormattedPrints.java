@@ -1,3 +1,5 @@
+import java.io.File;
+import java.util.Date;
 
 public class FormattedPrints {
 
@@ -31,7 +33,57 @@ public class FormattedPrints {
 		System.out.printf("%f\n", Math.PI);
 		System.out.printf("%5.2f\n", Math.PI);
 		System.out.printf("%05.2f\n", Math.PI);
-		System.out.printf("%,11.2f\n", 10000.256); //attention no
+		System.out.printf("%,11.2f\n", 10000.256); //attention le float a arrondi le chiffre apres la virgule ont avait 10000.256 
+													//ont arrondi donc a la dizaine ce qui donne 10000.26
+		System.out.printf("%e\n", Math.PI); //%e exprime le nombre avec son exposant 
+		
+		//types character et string
+		System.out.printf("%c - %s\n", 'z', "zorro");
+		System.out.printf(">%10s<\n", "toto");
+		System.out.printf(">%-10s<\n", "toto"); // ici le caractere - defini l'alignement par la gauche au lieu de droite
+		System.out.printf(">%10s< %%\n", "toto"); //%% indique que l'ont veut afficher le caractere %
+		
+		
+		//autres types
+		System.out.printf("%b \n", true);
+		System.out.printf("%h \n", new Date()); //ont visualise l'adresse memoire de la date
+		System.out.printf("%tF %tT\n", new Date(), new Date()); //%tF permet de formater la date , alors que %tT permet de formater le temps
+		
+		//exemple concret
+		System.out.println("_________________________________________________________");
+		
+		File [] files = new File(".").listFiles();
+		for(File file : files) {
+			long sizeKo = file.length() / 1024;
+			Date lastModifier = new Date(file.lastModified());
+			String name = file.getName();
+			
+			System.out.printf("| %,10d - %tF %tT |- %-20s |\n",sizeKo, lastModifier,lastModifier,name);
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
