@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class MyArrays {
 
@@ -23,6 +24,26 @@ public class MyArrays {
 		thirdArray[1]=true;								//je peut aussi initialiser une case de mon tableau ( ici la 2eme case en true)
 		for (boolean b : thirdArray) {
 			System.out.println(b);
+		}
+		System.out.println("__________");
+		String [] values = new String [10];
+		System.out.println(values.length);				//ici ont affiche la taille du tableau
+		for (String string : values) {
+			System.out.println(string);
+			
+		}
+
+		System.out.println(args.length);				//ici la taille du tableau initial du main
+		for (String string : args) {
+			System.out.println(string);
+			
+		}
+		System.out.println("______________");
+		ArrayList<String> coll = new ArrayList<>(); 	//voici un exemple different de tableau, ont appel cela une collection
+		coll.add("azerty");
+		coll.add("qwerty");
+		for (String string : coll) {
+			System.out.println(string);
 		}
 	}
 
