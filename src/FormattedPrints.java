@@ -49,16 +49,17 @@ public class FormattedPrints {
 		System.out.printf("%h \n", new Date()); //ont visualise l'adresse memoire de la date
 		System.out.printf("%tF %tT\n", new Date(), new Date()); //%tF permet de formater la date , alors que %tT permet de formater le temps
 		
-		//exemple concret
+		//exemple concret nous allons lister les elements d'un dossier
 		System.out.println("_________________________________________________________");
 		
-		File [] files = new File(".").listFiles();
-		for(File file : files) {
-			long sizeKo = file.length() / 1024;
-			Date lastModifier = new Date(file.lastModified());
-			String name = file.getName();
+		File [] files = new File(".").listFiles(); /*grace a la class File ont va lister dans un tableau tous les elements du dossier racine
+		 											du workspace*/
+		for(File file : files) { 					//ici ont boucle tant qu'ont a des type File
+			long sizeKo = file.length() / 1024; 	//ont creer une variable long pour lister la taille des objet dans le repertoire courant
+			Date lastModifier = new Date(file.lastModified()); //idem pour la date
+			String name = file.getName();			//idem pour le nom de chaques elements
 			
-			System.out.printf("| %,10d - %tF %tT |- %-20s |\n",sizeKo, lastModifier,lastModifier,name);
+			System.out.printf("| %,10d - %tF %tT |- %-20s |\n",sizeKo, lastModifier,lastModifier,name); //ont formate notre sortie
 			
 		}
 		
