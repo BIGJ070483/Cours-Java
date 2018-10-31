@@ -25,6 +25,13 @@ public class FormattedPrints {
 		
 		System.out.printf("%d %o %x\n", num, num , num); // %d = entier %o = octal %x = hexadecimale
 		System.out.printf(">%08x<\n",num); // ont peu grouper meme en hexadecimale( ou en octal)
+		
+		//types floattants
+		
+		System.out.printf("%f\n", Math.PI);
+		System.out.printf("%5.2f\n", Math.PI);
+		System.out.printf("%05.2f\n", Math.PI);
+		System.out.printf("%,11.2f\n", 10000.256); //attention no
 	}
 
 }
