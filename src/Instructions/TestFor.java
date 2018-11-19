@@ -22,5 +22,9 @@ public class TestFor {
 			System.out.println(i);
 		}
 		System.out.println("Décrementation terminée\n");
+		
+		for (int i = 0; i < 10; i++) {
+			
+		}
 	}
 }
