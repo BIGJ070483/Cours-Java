@@ -1,5 +1,10 @@
 package Methodes;
 
+class Rational {
+	int numerateur;
+	int denominateur;
+	
+}
 public class Mathematiques {
 
 	public static int maxi(int a , int b) { //methode static qui renvoi un int ( int = integer)
@@ -21,8 +26,19 @@ public class Mathematiques {
 		return accumulator;
 	}
 	
-	public static int pgcd (int first, int seconde) {
-		
+	public static int pgcd (int first, int second) {
+		while(second !=0) {
+			int reste = first % second;
+			first = second;
+			second = reste;
+		}
+		return first;		
+	}
+	
+	public static void simplify (Rational r) {
+		int diviseur = pgcd(maxi(r.numerateur, r.denominateur), mini(r.numerateur,r.denominateur));
+		r.numerateur /= diviseur;
+		r.denominateur /= diviseur;
 		
 	}
 	
@@ -39,7 +55,15 @@ public class Mathematiques {
 			System.out.println("power(2, 2) == " + power(2, 2)); // doit renvoyer 4
 			System.out.println("power(2, 3) == " + power(2, 3)); // doit renvoyer 8
 			
-
+			System.out.println(3*7*11);
+			System.out.println("pgcd(3*7*11*13, 2*3*7*11) == " + pgcd(3*7*11*13, 2*3*7*11)); // ici ont appel la methode pgcd pour verifie le plus grand denominateur commun
+			
+			Rational r = new Rational();
+			r.numerateur = 3*7*11*13;
+			r.denominateur = 2*3*7*11;
+			Mathematiques.simplify(r);
+			System.out.printf("[%d/%d]\n", r.numerateur, r.denominateur); 
+			return;
 	}
 
 }
